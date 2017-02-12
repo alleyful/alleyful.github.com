@@ -10,11 +10,11 @@ ajax('/data.json', function(data){
 ajax('/data.json', data => data+1);
 
 
-
-[].map(v = v+1);
-[{price:300}].filter(v => {
-    return v.price > 200
-})
+//
+// [].map(v = v+1);
+// [{price:300}].filter(v => {
+//     return v.price > 200
+// })
 
 const $ = require('jquery');
 
