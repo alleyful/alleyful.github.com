@@ -25,17 +25,17 @@ const createTable  = () => {
 }
 
 const createWeather  = () => {
-    ajax('http://api.openweathermap.org/data/2.5/forecast/daily?q=seoul&mode=json&units=metric&cnt=7&apikey=8d554a626fc5d01d77812b612a6de257', data => {
+   // ajax('http://api.openweathermap.org/data/2.5/forecast/daily?q=seoul&mode=json&units=metric&cnt=7&apikey=8d554a626fc5d01d77812b612a6de257', data => {
         // const weatherList = data.list.map(weather => {
         //     return {
         //
         //     }
         // })
-        console.log(data);
+   //     console.log(data);
         // $('#tableBox').html(tplWeather({
         //     weatherList:weatherList
         // }));
-    });
+  //  });
 }
 
 const fruitSum = (arr) => {
