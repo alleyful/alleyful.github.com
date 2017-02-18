@@ -66,9 +66,10 @@ $('[data-view="list"]').html(tplList({
 
 
 $('#btnTable').on('click',(e) => {
+    $('.mdl-button').removeClass('mdl-button--accent');
     if($('#btnTable').hasClass('mdl-button--accent')){
         $('#tableBox').html('');
-        $('#btnTable').removeClass('mdl-button--accent');
+
     } else {
         $('#btnTable').addClass('mdl-button--accent');
         createTable();
@@ -76,9 +77,10 @@ $('#btnTable').on('click',(e) => {
 });
 
 $('#btnWeather').on('click',(e) => {
+    $('.mdl-button').removeClass('mdl-button--accent');
     if($('#btnWeather').hasClass('mdl-button--accent')){
         $('#tableBox').html('');
-        $('#btnWeather').removeClass('mdl-button--accent');
+
     } else {
         $('#btnWeather').addClass('mdl-button--accent');
         $('#tableBox').html('');
