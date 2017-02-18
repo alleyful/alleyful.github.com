@@ -1,3 +1,4 @@
+
 import tplList from './list.hbs';
 import tplMain from './main.hbs';
 import tplTable from './table.hbs';
@@ -18,24 +19,28 @@ const createTable  = () => {
         });
         const tableTotal = fruitSum(tableList);
         $('#tableBox').html(tplTable({
-             tableList:tableList,
-             tableTotal:tableTotal
+            tableList:tableList,
+            tableTotal:tableTotal
         }));
     });
 }
 
 const createWeather  = () => {
-   // ajax('http://api.openweathermap.org/data/2.5/forecast/daily?q=seoul&mode=json&units=metric&cnt=7&apikey=8d554a626fc5d01d77812b612a6de257', data => {
-        // const weatherList = data.list.map(weather => {
-        //     return {
-        //
-        //     }
-        // })
-   //     console.log(data);
-        // $('#tableBox').html(tplWeather({
-        //     weatherList:weatherList
-        // }));
-  //  });
+    ajax('http://api.openweathermap.org/data/2.5/forecast/daily?q=seoul&mode=json&units=metric&cnt=7&apikey=8d554a626fc5d01d77812b612a6de257', data => {
+        const weatherList = data.list.map(weather => {
+            return {
+                date: new Date(weather.dt*1000),
+                temp: `${weather.temp.day}도`
+            }
+        });
+        //console.log(weatherList);
+        //console.log(data);
+        $('#tableBox').html(tplWeather({
+            weatherList: weatherList
+        }));
+    });
+
+
 }
 
 const fruitSum = (arr) => {
@@ -80,4 +85,3 @@ $('#btnWeather').on('click',(e) => {
         createWeather();
     }
 });
-
