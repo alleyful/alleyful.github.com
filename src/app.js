@@ -1,12 +1,16 @@
 
-import tplList from './list.hbs';
-import tplMain from './main.hbs';
-import tplTable from './table.hbs';
-import tplWeather from './weather.hbs';
-import ajax from './ajax.js';
+import tplList from './templates/list.hbs';
+import tplMain from './templates/main.hbs';
+import tplTable from './templates/table.hbs';
+import tplWeather from './templates/weather.hbs';
+import ajax from './util/ajax.js';
 const $ = require('jquery');
 
-$('#root').html(tplMain);
+$('#root').html(tplMain{});
+
+$('[data-view="list"]').html(tplList({
+    list: list
+}));
 
 const createTable  = () => {
     ajax('https://raw.githubusercontent.com/suhokim2/suhokim2.github.com/master/data.json', data => {
@@ -51,18 +55,10 @@ const fruitSum = (arr) => {
     return result;
 };
 
-const list = [{
-    href: 'http://www.naver.com',
-    name: 'naver'
-},{
-    href:'http://www.daum.net',
-    name:'daum'
-}];
+const list = require();
 
 
-$('[data-view="list"]').html(tplList({
-    list: list
-}));
+
 
 
 $('#btnTable').on('click',(e) => {
