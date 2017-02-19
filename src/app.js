@@ -92,6 +92,7 @@ $(DOM.weatherBtn).on('click', function(){
     weatherComponent.toggle();
 });
 
+/*
 navigator.geolocation.getCurrentPosition(function(pos){
     var latitude = pos.coords.latitude;
     var longitude = pos.coords.longitude;
@@ -102,6 +103,7 @@ navigator.geolocation.getCurrentPosition(function(pos){
         map: map
     });
 })
+*/
 
 
 
