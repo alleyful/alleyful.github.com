@@ -1,17 +1,5 @@
 <div class="demo-layout-transparent mdl-layout mdl-js-layout">
     {{> header}}
-    <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Title</span>
-        <nav class="mdl-navigation"  data-view="list">
-        </nav>
-    </div>
-    <main class="mdl-layout__content">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="btnTable">
-            과일
-        </button>
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="btnWeather">
-            날씨
-        </button>
-        <div id="tableBox"></div>
-    </main>
+    {{> mdl-layout__drawer}}
+    {{> mdl-layout__content}}
 </div>
